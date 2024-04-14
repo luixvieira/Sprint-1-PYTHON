@@ -1,6 +1,4 @@
-# Sistema de Pré e Auto-atendimento de problemas em carros
-
-# Criando a função exibir menu, quando eu chama-lá pelo nome da função, ela rodará.
+# Sistema de Pré-Atendimento para Diagnóstico de Problemas em Carros
 
 def exibir_menu():
     print("Bem-vindo ao Sistema de Pré-Atendimento para Carros!")
@@ -9,15 +7,37 @@ def exibir_menu():
     print("2. Realizar diagnóstico")
     print("3. Sair")
 
-# Criando função para registrar problemas
 def registrar_problemas():
     problemas = input("Digite os problemas do carro (separados por vírgula): ")
     return problemas.split(", ")
-    # a função split serve para separar o que foi inserido no input, desta forma,
-    # quando eu defini o parametro para a sepação como ",", os problemas serao salvos separadamente
+# O split serve para separar os problemas, dessa forma, a cada vigurla, vira um problema novo
 
 def realizar_diagnostico(problemas):
-   if "motor" in problemas:
-        return "Possível problema: motor com defeito"
+    # Lógica para determinar o possível problema com base nos problemas registrados
+    # Aqui a gnt pode implementar regras especificas para a detecção dos problemas
+
+    # Exemplo simples: se "motor" estiver nos problemas digitados, sugerir o diagnostico "problema no motor"
+    if "motor" in problemas:
+        print("Possível problema: motor com defeito")
     else:
-        return "Não foi possível determinar o problema com base nos dados fornecidos."
+        print("Não foi possível determinar o problema com base nos dados fornecidos.")
+
+def main():
+    while True:
+        exibir_menu()
+        opcao = input("Digite o número da opção desejada: ")
+
+        if opcao == "1":
+            problemas_registrados = registrar_problemas()
+            print("Problemas registrados:", problemas_registrados)
+        elif opcao == "2":
+            possivel_problema = realizar_diagnostico(problemas_registrados)
+            print("Diagnóstico:", possivel_problema)
+        elif opcao == "3":
+            print("Encerrando o programa. Obrigado!")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+if __name__ == "__main__":
+    main()
