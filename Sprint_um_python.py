@@ -15,3 +15,9 @@ def registrar_problemas():
     return problemas.split(", ")
     # a função split serve para separar o que foi inserido no input, desta forma,
     # quando eu defini o parametro para a sepação como ",", os problemas serao salvos separadamente
+
+def realizar_diagnostico(problemas):
+   if "motor" in problemas:
+        return "Possível problema: motor com defeito"
+    else:
+        return "Não foi possível determinar o problema com base nos dados fornecidos."
