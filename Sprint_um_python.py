@@ -22,7 +22,7 @@ def realizar_diagnostico(problemas):
     elif "pneu" in problemas:
         print("Possivel problema no pneu, entre em nosso site para poder realizar a troca.")
     else:
-        print("Não foi possível determinar o problema com base nos dados fornecidos.")
+        print("Não foi possível determinar o problema com base nos dados fornecidos, entre em nosso site para marcar uma avaliação presencial")
 
 def main():
     while True:
