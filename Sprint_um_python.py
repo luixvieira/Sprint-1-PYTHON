@@ -19,6 +19,8 @@ def realizar_diagnostico(problemas):
     # Exemplo simples: se "motor" estiver nos problemas digitados, sugerir o diagnostico "problema no motor"
     if "motor" in problemas:
         print("Possível problema: motor com defeito")
+    elif "pneu" in problemas:
+        print("Possivel problema no pneu, entre em nosso site para poder realizar a troca.")
     else:
         print("Não foi possível determinar o problema com base nos dados fornecidos.")
 
