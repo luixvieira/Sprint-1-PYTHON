@@ -24,6 +24,8 @@ def realizar_diagnostico(problemas):
     else:
         print("Não foi possível determinar o problema com base nos dados fornecidos, entre em nosso site para marcar uma avaliação presencial")
 
+
+# A main é sempre a classe que vai rodar primeiro, apos criar as funcoes que serao usadas na main, eu crio a classe em que elas serao usadas
 def main():
     while True:
         exibir_menu()
